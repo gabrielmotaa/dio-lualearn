@@ -1,7 +1,6 @@
 local ID = "nyff.congelou"
 
 local Node = require("node")
-local Choice = require("choice")
 
 local node = Node:new(ID) --- @type Node
 node.title = "Congelou"
