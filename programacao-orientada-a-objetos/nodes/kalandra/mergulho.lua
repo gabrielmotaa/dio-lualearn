@@ -22,7 +22,7 @@ node:addChoice(
     "Sinistro! Sair do mar e voltar para a praia.",
     nil,
     function()
-        game.medoDoMar = true
+        game.thalassophobic = true
     end
 )
 

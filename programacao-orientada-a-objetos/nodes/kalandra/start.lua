@@ -28,7 +28,7 @@ node:addChoice(
     "kalandra.mergulho",
     "Dar um mergulho no mar.",
     function()
-        return game.medoDoMar ~= true
+        return game.thalassophobic ~= true
     end
 )
 
