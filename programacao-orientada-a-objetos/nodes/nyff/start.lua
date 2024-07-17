@@ -1,7 +1,6 @@
 local ID = "nyff.start"
 
 local Node = require("node")
-local Choice = require("choice")
 
 local node = Node:new(ID) --- @type Node
 node.title = "Montanhas de Nyff"
@@ -18,17 +17,17 @@ node.header = [[
 %{cyan}/  /    \/ /\     \    /    \ \  /    \/ /   /  \/  \/  \  /    \   \
 ]]
 
-table.insert(node.choices, Choice:new(
+node:addChoice(
     "nyff.floresta",
     "Buscar comida na floresta congelada."
-))
-table.insert(node.choices, Choice:new(
+)
+node:addChoice(
     "nyff.iglu",
     "Criar um iglu para se proteger do frio."
-))
-table.insert(node.choices, Choice:new(
+)
+node:addChoice(
     "nyff.congelou",
     "O frio é psicológico."
-))
+)
 
 return node

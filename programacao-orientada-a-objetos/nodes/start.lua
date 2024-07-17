@@ -1,7 +1,6 @@
 local ID = "start"
 
 local Node = require("node")
-local Choice = require("choice")
 
 local node = Node:new(ID) --- @type Node
 node.title = "Uma nova aventura"
@@ -20,13 +19,13 @@ node.header = [[%{magenta}
 ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
 ]]
 
-table.insert(node.choices, Choice:new(
+node:addChoice(
   "kalandra.start",
   "Para a praia ensolarada de Kalandra"
-))
-table.insert(node.choices, Choice:new(
+)
+node:addChoice(
   "nyff.start",
   "Para as montanhas geladas de Nyff"
-))
+)
 
 return node

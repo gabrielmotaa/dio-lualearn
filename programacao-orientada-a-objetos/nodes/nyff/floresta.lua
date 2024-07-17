@@ -3,7 +3,6 @@ local ID = "nyff.floresta"
 
 -- Dependencies
 local Node = require("node")
-local Choice = require("choice")
 
 -- Create node
 local node = Node:new(ID) ---@type Node
@@ -13,13 +12,13 @@ node.description = [[Depois de muito andar você encontrou uma pequena e modesta
 Depois de uma bela noite de sono, é hora de continuar a aventura. Um dos Villagers sugere que você siga a trilha que da a volta na montanha, pois é o caminho mais longo e também mais seguro.]]
 
 -- Create choices
-table.insert(node.choices, Choice:new(
+node:addChoice(
     "nyff.trilha",
     "Seguir pela trilha que dá a volta na montanha."
-))
-table.insert(node.choices, Choice:new(
+)
+node:addChoice(
     "nyff.escalar",
     "Queremos chegar no topo ainda hoje, vamos escalar a montanha!"
-))
+)
 
 return node

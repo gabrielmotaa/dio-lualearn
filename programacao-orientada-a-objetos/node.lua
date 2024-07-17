@@ -1,5 +1,8 @@
 local class = require("libs.middleclass")
 
+-- Dependências
+local Choice = require('choice')
+
 --- @class Node
 local Node = class("Node")
 
@@ -13,6 +16,20 @@ function Node:initialize(id)
   self.choices = {}       --- @type Choice[]
   self.gameOver = false   --- @type boolean
   self.gameWon = false    --- @type boolean
+end
+
+--- Adiciona uma instância de choice ao node.
+--- @param destination string
+--- @param description string
+--- @param condition? fun(string):boolean
+--- @param routine? function
+function Node:addChoice(destination, description, condition, routine)
+  table.insert(self.choices, Choice:new(
+    destination,
+    description,
+    condition,
+    routine
+  ))
 end
 
 return Node
