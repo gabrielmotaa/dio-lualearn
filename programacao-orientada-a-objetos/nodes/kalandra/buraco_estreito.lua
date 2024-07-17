@@ -1,16 +1,16 @@
--- Constants
+-- Constantes
 local ID = "kalandra.buraco_estreito"
 
--- Dependencies
+-- Dependências
 local Node = require("node")
 
--- Create node
+-- Criar node
 local node = Node:new(ID) ---@type Node
 node.title = "Calabouço de Kalandra"
 node.description = [[Você chegou até a porta dourada! Ela é imponente e reluzente, e emana um poder incrível de alguma forma.
 Você nota uma fechadura de ouro, que parece pedir uma chave equivalente.]]
 
--- Create choices
+-- Adicionar choices
 node:addChoice(
     "kalandra.sucesso",
     "Usar a chave de ouro",

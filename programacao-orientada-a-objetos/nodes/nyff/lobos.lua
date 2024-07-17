@@ -1,10 +1,10 @@
--- Constants
+-- Constantes
 local ID = "nyff.lobos"
 
--- Dependencies
+-- Dependências
 local Node = require("node")
 
--- Create node
+-- Criar node
 local node = Node:new(ID) ---@type Node
 node.title = "Banquete Canino"
 node.gameOver = true

@@ -1,10 +1,10 @@
--- Constants
+-- Constantes
 local ID = "kalandra.tomar_um_sol"
 
--- Dependencies
+-- Dependências
 local Node = require("node")
 
--- Create node
+-- Criar node
 local node = Node:new(ID) ---@type Node
 node.title = "Fim da aventura"
 node.gameWon = true

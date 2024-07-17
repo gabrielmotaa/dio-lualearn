@@ -1,14 +1,14 @@
--- Constants
+-- Constantes
 local ID = "kalandra.mergulho"
 
--- Dependencies
+-- Dependências
 local Node = require("node")
 
--- Create node
+-- Criar node
 local node = Node:new(ID) ---@type Node
 node.description = "Durante seu mergulho você encontra um navio pirata submerso, a poucos metros de profundidade. Algumas bolhas de ar saem de dentro dele."
 
--- Create choices
+-- Adicionar choices
 node:addChoice(
     "kalandra.kraken_game_over",
     "Tomar um ar e mergulhar novamente para dar uma olhada mais de perto."
