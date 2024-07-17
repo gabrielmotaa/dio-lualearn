@@ -3,8 +3,10 @@ local class = require("libs.middleclass")
 --- @class Node
 local Node = class("Node")
 
+--- Configura uma instância de 'Node' para middleclass.
+--- @param id string
 function Node:initialize(id)
-  self.id = id            --- @type string
+  self.id = id
   self.title = nil        --- @type string
   self.description = nil  --- @type string
   self.header = nil       --- @type string

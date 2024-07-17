@@ -6,17 +6,19 @@ local utils = require("utils")
 --- @class Engine
 local Engine = class("Engine")
 
-function Engine:initialize()
-end
-
+--- Wrapper de ansicolors para print.
+--- @param ... any
 local function print(...)
   _G.print(ansicolors(...))
 end
 
+--- Wrapper de ansicolors para io.write
+--- @param ... any
 local function iowrite(...)
   io.write(ansicolors(...))
 end
 
+--- Inicia o loop principal do jogo.
 function Engine:runMainLoop()
 
   while not game.isOver do
@@ -66,7 +68,7 @@ function Engine:runMainLoop()
   end
 end
 
---- comment
+--- Cria um separador com o título provido.
 --- @param title string|nil
 --- @return string
 local function createSeparator(title)
@@ -84,6 +86,7 @@ local function createSeparator(title)
   return result
 end
 
+--- Faz o print de um node, com seu header, título e descrição.
 --- @param node Node
 function Engine:printNode(node)
   if node.header then
@@ -96,6 +99,7 @@ function Engine:printNode(node)
   print(createSeparator())
 end
 
+--- Coleta escolhas válidas de um node.
 --- @param node Node
 --- @return Choice[]
 function Engine:getValidChoices(node)
@@ -108,6 +112,7 @@ function Engine:getValidChoices(node)
   return result
 end
 
+--- Faz o print de escolhas fornecidas.
 --- @param choices Choice[]
 function Engine:showChoices(choices)
   for i, choice in pairs(choices) do
@@ -115,6 +120,7 @@ function Engine:showChoices(choices)
   end
 end
 
+--- Coleta o input de um usuário, com validação.
 --- @param amount number
 --- @return number
 function Engine:askForInput(amount)

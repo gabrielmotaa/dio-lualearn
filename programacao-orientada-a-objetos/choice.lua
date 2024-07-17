@@ -3,11 +3,16 @@ local class = require("libs.middleclass")
 --- @class Choice
 local Choice = class("Choice")
 
+--- Configura uma instância de 'Choice' para middleclass.
+--- @param destination string
+--- @param description string
+--- @param condition fun(string):boolean
+--- @param routine function
 function Choice:initialize(destination, description, condition, routine)
-  self.destination = destination --- @type string
-  self.description = description --- @type string
-  self.condition = condition     --- @type fun(string):boolean
-  self.routine = routine         --- @type function
+  self.destination = destination
+  self.description = description
+  self.condition = condition
+  self.routine = routine
 end
 
 --- Retorna se a escolha tem uma condição a ser executada.

@@ -4,6 +4,7 @@ local nodeDictionary = {} --- @type table<string, Node>
 local initialNode = nil   --- @type Node
 local hasErrors = false
 
+--- Carrega um node a partir de um arquivo lua.
 --- @param path string
 --- @return Node|nil
 local function loadNode(path)
@@ -25,6 +26,7 @@ local function loadNode(path)
   return node
 end
 
+--- Carrega nodes a partir de escolhas de outro node.
 --- @param parentNode Node
 local function loadNodesFromChoices(parentNode)
   for _, choice in pairs(parentNode.choices) do
