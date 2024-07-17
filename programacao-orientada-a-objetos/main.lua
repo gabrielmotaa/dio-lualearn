@@ -1,5 +1,3 @@
-local inspect = require("libs.inspect")
-
 local GameData = require("game_data")
 local Engine = require("engine")
 local nodeLoader = require("node_loader")
