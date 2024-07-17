@@ -9,6 +9,8 @@ function GameData:initialize()
   self.isOver = false
   self.hasKey = false
   self.thalassophobic = false
+  self.thirsty = false
+  self.hasMagicLamp = false
 end
 
 return GameData

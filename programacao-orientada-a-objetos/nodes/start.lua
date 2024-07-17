@@ -27,5 +27,9 @@ node:addChoice(
   "nyff.start",
   "Para as montanhas geladas de Nyff"
 )
+node:addChoice(
+  "shorlak.start",
+  "Para as dunas imperdoáveis de Shorlak"
+)
 
 return node
