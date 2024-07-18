@@ -2,11 +2,12 @@ local class = require(game.ReplicatedStorage.middleclass)
 
 local Tile = class("Tile")
 
-local MAX_STAGE = 2
+local MAX_STAGE = 3
 
 local stages = {
 	game.ReplicatedStorage.Prefabs.Stage1,
-	game.ReplicatedStorage.Prefabs.Stage2
+	game.ReplicatedStorage.Prefabs.Stage2,
+	game.ReplicatedStorage.Prefabs.Stage3
 }
 
 function Tile:initialize(instance)
